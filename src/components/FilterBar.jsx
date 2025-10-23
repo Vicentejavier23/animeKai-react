@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function FilterBar({ filter, setFilter }) {
   const filters = ['all', 'figuras', 'mangas', 'ropa', 'accesorios']
   return (
@@ -14,3 +16,7 @@ export default function FilterBar({ filter, setFilter }) {
     </div>
   )
 }
+FilterBar.propTypes = {
+  filter: PropTypes.string.isRequired,
+  setFilter: PropTypes.func.isRequired,
+};

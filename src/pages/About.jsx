@@ -113,33 +113,37 @@ Mensaje: ${form.message}`;
           <h3>Contáctanos</h3>
 
           <div className="form-group">
-            <label>Nombre:</label>
-            <input
-              type="text"
-              name="from_name"
-              value={form.from_name}
-              onChange={handleChange}
-            />
-          </div>
+  <label htmlFor="from_name">Nombre:</label>
+  <input
+    id="from_name"
+    type="text"
+    name="from_name"
+    value={form.from_name}
+    onChange={handleChange}
+  />
+</div>
 
-          <div className="form-group">
-            <label>Correo:</label>
-            <input
-              type="email"
-              name="from_email"
-              value={form.from_email}
-              onChange={handleChange}
-            />
-          </div>
+<div className="form-group">
+  <label htmlFor="from_email">Correo:</label>
+  <input
+    id="from_email"
+    type="email"
+    name="from_email"
+    value={form.from_email}
+    onChange={handleChange}
+  />
+</div>
 
-          <div className="form-group">
-            <label>Mensaje:</label>
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-            ></textarea>
-          </div>
+<div className="form-group">
+  <label htmlFor="message">Mensaje:</label>
+  <textarea
+    id="message"
+    name="message"
+    value={form.message}
+    onChange={handleChange}
+  ></textarea>
+</div>
+
 
           {error && <span className="error-message">{error}</span>}
           {success && <p style={{ color: 'green' }}>{success}</p>}

@@ -7,13 +7,13 @@ export default function Productos() {
 
   useEffect(() => {
     setProductos([
-      { id: 1, name: "Figura Naruto", price: 20000, category: "figuras", img: "/imagenes/6i9s4cff.png" },
-      { id: 2, name: "One Piece Vol. 100", price: 40000, category: "mangas", img: "/imagenes/81rEhhwbubL._SL1500_.jpg" },
-      { id: 3, name: "Poster Attack on Titan", price: 25000, category: "accesorios", img: "/imagenes/il_1080xN.5944656713_5rty.webp" },
-      { id: 4, name: "Camiseta Naruto", price: 15000, category: "ropa", img: "/imagenes/OI.webp" },
+      { id: 1, name: "Figura Naruto", price: 20000, category: "figuras", img: "/imagenes/figura_naruto.png" },
+      { id: 2, name: "One Piece Vol. 100", price: 40000, category: "mangas", img: "/imagenes/manga_onepiece.jpg" },
+      { id: 3, name: "Poster Attack on Titan", price: 25000, category: "accesorios", img: "/imagenes/poster_attackontitan.webp" },
+      { id: 4, name: "Camiseta Naruto", price: 15000, category: "ropa", img: "/imagenes/polera_naruto.webp" },
       { id: 5, name: "Poleron Alucard", price: 25000, category: "ropa", img: "/imagenes/poleronalucard.avif" },
       { id: 6, name: "Poleron Gohan", price: 18000, category: "ropa", img: "/imagenes/polerongohan.webp" },
-      { id: 6, name: "Traje Padre Anderson", price: 50000, category: "ropa", img: "/imagenes/trajeanderson.jpg" }
+      { id: 7, name: "Traje Padre Anderson", price: 50000, category: "ropa", img: "/imagenes/trajeanderson.jpg" }
     ]);
   }, []);
 

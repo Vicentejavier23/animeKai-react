@@ -16,7 +16,7 @@ export default function App() {
       <Header onCartClick={() => setCartOpen(true)} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Productos" element={<Productos />} />
+        <Route path="/productos" element={<Productos />} />
         <Route path="/series" element={<Series />} />
         <Route path="/about" element={<About />} />
       </Routes>

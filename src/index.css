@@ -8,7 +8,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark-color); background-color: var(--light-color); }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark-color); background-color: var(--light-color); min-height: 100vh; display: flex; flex-direction: column; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
 header { background-color: var(--dark-color); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
@@ -22,18 +22,42 @@ nav ul li a:hover, nav ul li a.active { background-color: var(--primary-color); 
 .cart-icon { position: relative; cursor: pointer; font-size: 1.5rem; }
 .cart-count { position: absolute; top: -10px; right: -10px; background-color: var(--primary-color); color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center; font-size: 0.8rem; }
 
-main { min-height: calc(100vh - 200px); padding: 2rem 0; }
+main { flex: 1 0 auto; padding: 2rem 0; }
 .hero { background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); color: white; padding: 3rem; border-radius: 8px; text-align: center; margin-bottom: 2rem; }
 .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
 .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
 .cta-button { display: inline-block; background-color: var(--accent-color); color: var(--dark-color); border: none; padding: 0.8rem 2rem; border-radius: 4px; font-size: 1.1rem; cursor: pointer; text-decoration: none; transition: transform 0.3s; }
 .cta-button:hover { transform: translateY(-3px); }
 
-.Productos-grid, .series-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-.product-card, .series-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s; }
+.Productos-grid, .series-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20 rem; margin-top: 2rem; text-align: center;}
+.product-card, .series-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08); transition: transform 0.3s; border: 1px solid rgba(0,0,0,0.04); }
 .product-card:hover, .series-card:hover { transform: translateY(-5px); }
-.product-card img, .series-card img, .cart-item img { width: 100%; height: 250px; object-fit: contain; padding: 0.5rem; }
+
+.product-card .content, .series-card .content { padding: 0.75rem 1rem 1rem; }
+
+.product-card img, .cart-item img { width: 95%; height: 250px; object-fit: contain; padding: 0.5rem; }
 .cart-item img { width: 60px; height: 60px; }
+.series-card img{width: 90%; height: 220px; object-fit: contain; transform: scale(0.9); }
+.product-card picture, .series-card picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    padding: 12px;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 8px 8px 0 0;
+}
+
+.product-card picture img, .series-card picture img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    image-rendering: auto;
+    filter: none;
+    display: block;
+}
 .product-card h3, .series-card h3 { padding: 0.5rem 1rem; font-size: 1.2rem; }
 .product-card .price { padding: 0 1rem; color: var(--primary-color); font-weight: bold; font-size: 1.1rem; }
 .add-to-cart, .series-btn { display: block; width: calc(100% - 2rem); margin: 1rem; padding: 0.5rem; background-color: var(--secondary-color); color: white; border: none; border-radius: 4px; cursor: pointer; text-align: center; text-decoration: none; transition: background-color 0.3s; }

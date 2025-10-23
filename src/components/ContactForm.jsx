@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
 
-/**
- * ContactForm
- * - Modo 1 (por defecto): muestra el contenido del correo y usa mailto: para abrir el cliente
- * - Modo 2 (opcional): enviar a Formspree usando fetch (necesitas crear un endpoint en Formspree y pegarlo abajo)
- */
 export default function ContactForm() {
   const [form, setForm] = useState({ name: 'Vicente', email: 'vicentejavierbueno', subject: '', message: '' });
   const [previewOpen, setPreviewOpen] = useState(false);
