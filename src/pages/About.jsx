@@ -77,10 +77,10 @@ Mensaje: ${form.message}`;
 
     emailjs
       .sendForm(
-        'service_sabqg8a',
-        'template_9pfxrzm',
+        'service_kt80mwp',
+        'template_4rv54mj',
         formRef.current,
-        'PSU86fj00YKilqrFG'
+        'M0Z02nLJBQ7yLgrMM'
       )
       .then(() => {
         setSuccess('Correo enviado con éxito ✅');
