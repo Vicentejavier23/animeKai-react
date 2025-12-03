@@ -27,10 +27,10 @@ export default function ContactForm() {
     setResult(null);
 
     emailjs.sendForm(
-      "service_bmhmv3n",
-      "template_4rv54mj",
+      "service_wr0do1y",
+      "template_vtyivur",
       formRef.current,
-      "zSALsmGE2152AYMXH"
+      "pAZjijl9kXE8-W4GC"
     )
     .then(
       () => setResult({ ok: true, message: "Correo enviado correctamente." }),
