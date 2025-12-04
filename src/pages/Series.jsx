@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const seriesList = [
   { id: 'naruto', name: 'Naruto', img: '/imagenes/nnaruto.webp' },
@@ -5,7 +6,7 @@ const seriesList = [
   { id: 'dragonball', name: 'Dragon Ball', img: '/imagenes/dragonball.jpg' },
   { id: 'attackontitan', name: 'Attack on Titan', img: '/imagenes/attackontitan.jpg' },
   { id: 'hellsing', name: 'Hellsing', img: '/imagenes/hellsing.webp' }
-]
+];
 
 export default function Series() {
   return (
@@ -17,11 +18,14 @@ export default function Series() {
             <img src={s.img} alt={s.name} />
             <div className="content">
               <h3>{s.name}</h3>
-              <a href={`/productos?serie=${s.id}`} className="series-btn">Ver Productos</a>
+              {/* Botón a Trailer */}
+              <Link to={`/series/${s.id}`} className="series-btn">Ver Trailer 🎥</Link>
+              {/* Botón Productos */}
+              <a href={`/productos?serie=${s.id}`} className="series-btn">Ver Productos 🛒</a>
             </div>
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 }

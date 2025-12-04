@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Productos from "./pages/Productos";
@@ -7,11 +6,9 @@ import About from "./pages/About";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CartModal from "./components/CartModal";
-import AnimeDetalle from "./components/AnimeDetalle";
+import { useState } from "react";
 
-
-import Login from "./pages/Login";  
-export default function App() {
+export default function Rutas() {
   const [cartOpen, setCartOpen] = useState(false);
 
   return (
@@ -23,11 +20,10 @@ export default function App() {
         <Route path="/productos" element={<Productos />} />
         <Route path="/series" element={<Series />} />
         <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/series/:id" element={<AnimeDetalle />} />
       </Routes>
 
       <Footer />
+
       <CartModal isOpen={cartOpen} onClose={() => setCartOpen(false)} />
     </>
   );
