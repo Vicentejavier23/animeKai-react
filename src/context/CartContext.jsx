@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 
 const CartContext = createContext();
-
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
@@ -16,21 +15,20 @@ export const CartProvider = ({ children }) => {
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
-      } else {
-        return [...prev, { ...product, quantity: 1 }];
       }
+      return [...prev, { ...product, quantity: 1 }];
     });
   };
 
-  const removeItem = (id) =>
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
+  const removeItem = (id) => setCartItems(prev => prev.filter(item => item.id !== id));
 
   const emptyCart = () => setCartItems([]);
 
   const total = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
+    (sum, item) => sum + item.precio * item.quantity,
     0
   );
+
   const itemCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
@@ -41,3 +39,4 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
+

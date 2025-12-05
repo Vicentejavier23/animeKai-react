@@ -22,15 +22,21 @@ export default function CartModal({ isOpen, onClose }) {
             cartItems.map((item) => (
               <div key={item.id} className="cart-item">
                 <div style={{ width: 60, height: 60 }}>
-                  <img src={item.img} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img
+                    src={item.imagenUrl}
+                    alt={item.nombre}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
                 </div>
+
                 <div className="cart-item-details">
-                  <strong>{item.name}</strong>
+                  <strong>{item.nombre}</strong>
                   <p>
-                    ${item.price} x {item.quantity} = $
-                    {item.price * item.quantity}
+                    ${item.precio} x {item.quantity} =
+                    <strong> ${item.precio * item.quantity}</strong>
                   </p>
                 </div>
+
                 <button
                   className="remove-item"
                   onClick={() => removeItem(item.id)}
@@ -56,6 +62,7 @@ export default function CartModal({ isOpen, onClose }) {
     </div>
   );
 }
+
 CartModal.propTypes = {
   isOpen: PropTypes.bool,
   onClose: PropTypes.func,

@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 
 export default function Home() {
-  const featured = [
-    { id: 1, name: "Figura Naruto", price: 20000, img: "/imagenes/figura_naruto.png" },
-    { id: 2, name: "One Piece Vol. 100", price: 40000, img: "/imagenes/manga_onepiece.jpg" },
-    { id: 3, name: "Poster Attack on Titan", price: 25000, img: "/imagenes/poster_attackontitan.webp" },
-    { id: 4, name: "Poleron Alucard", price: 25000, img: "/imagenes/poleronalucard.avif" }
-  ];
+const featured = [
+  { id: "RIxpgIBOFgiEFxNOAx2T", nombre: "Figura Naruto", precio: 20000, imagenUrl: "/imagenes/figura_naruto.png" },
+  { id: "MkTBfBDnBiCm87DMvDqd", nombre: "One Piece Vol. 100", precio: 40000, imagenUrl: "/imagenes/manga_onepiece.jpg" },
+  { id: "eTZgm1kF6TNN0lDurJ9y", nombre: "Poster Attack on Titan", precio: 25000, imagenUrl: "/imagenes/poster_attackontitan.webp" },
+  { id: "FSWN2hzBjvDCPcMlLkuR", nombre: "Poleron Alucard", precio: 25000, imagenUrl: "/imagenes/poleronalucard.avif" }
+];
+
 
   return (
     <main>
@@ -24,6 +25,7 @@ export default function Home() {
           <div className="Productos-grid">
             {featured.map((p) => (
               <ProductCard key={p.id} product={p} />
+              
             ))}
           </div>
         </div>

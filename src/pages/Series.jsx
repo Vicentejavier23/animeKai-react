@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const seriesList = [
-  { id: 'naruto', name: 'Naruto', img: '/imagenes/nnaruto.webp' },
+  { id: 'naruto', name: 'Naruto', img: '/imagenes/naruto.webp' },
   { id: 'onepiece', name: 'One Piece', img: '/imagenes/onepiece.webp' },
   { id: 'dragonball', name: 'Dragon Ball', img: '/imagenes/dragonball.jpg' },
   { id: 'attackontitan', name: 'Attack on Titan', img: '/imagenes/attackontitan.jpg' },

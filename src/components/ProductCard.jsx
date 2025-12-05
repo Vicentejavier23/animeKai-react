@@ -7,15 +7,15 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="product-card">
-      <img src={product.img} alt={product.name} />
+      <img src={product.imagenUrl} alt={product.nombre} />
       <div className="content">
-        <h3>{product.name}</h3>
-        <p className="price">${product.price}</p>
+        <h3>{product.nombre}</h3>
+        <p className="price">${product.precio}</p>
         <button
           className="add-to-cart"
           onClick={() => addToCart(product)}
         >
-          Añadir al carrito
+          Añadir al carrito 🛒
         </button>
       </div>
     </div>
@@ -25,9 +25,9 @@ export default function ProductCard({ product }) {
 ProductCard.propTypes = {
   product: PropTypes.shape({
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    name: PropTypes.string.isRequired,
-    img: PropTypes.string,
-    price: PropTypes.number.isRequired,
-    category: PropTypes.string,
+    nombre: PropTypes.string.isRequired,
+    imagenUrl: PropTypes.string,
+    precio: PropTypes.number.isRequired,
   }).isRequired,
+  onAddToCart: PropTypes.func,
 };
